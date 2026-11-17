@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página web</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mi página web</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido</h2>
+            <p>Soluciones profesionales y eficientes para impulsar su empresa.</p>
+        </section>
+
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <p>Consultoría, desarrollo y acompañamiento adaptados a sus objetivos.</p>
+        </section>
+
+        <section id="nosotros">
+            <h2>Sobre nosotros</h2>
+            <p>Somos un equipo comprometido con la calidad, la transparencia y los resultados.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Póngase en contacto con nuestro equipo para conocer más sobre nuestros servicios.</p>
+            <form class="contact-form" action="#" method="post">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="given-name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" autocomplete="family-name" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="telefono">Teléfono <span>(opcional)</span></label>
+                        <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+                    </div>
+                </div>
+
+                <fieldset class="contact-methods">
+                    <legend>Preferencia de contacto por teléfono</legend>
+                    <label class="contact-option">
+                        <input type="radio" name="contacto_telefono" value="whatsapp">
+                        <img class="service-logo" src="images/whatsapp.svg" alt="">
+                        <span>WhatsApp</span>
+                    </label>
+
+                    <label class="contact-option">
+                        <input type="radio" name="contacto_telefono" value="telegram">
+                        <img class="service-logo" src="images/telegram.svg" alt="">
+                        <span>Telegram</span>
+                    </label>
+
+                    <label class="contact-option">
+                        <input type="radio" name="contacto_telefono" value="signal">
+                        <img class="service-logo" src="images/signal.svg" alt="">
+                        <span>Signal</span>
+                    </label>
+                </fieldset>
+
+                <button type="submit">Enviar solicitud</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mi página web</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
