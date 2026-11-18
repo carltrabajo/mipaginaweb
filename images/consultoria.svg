@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+    <title id="title">Planificación estratégica</title>
+    <rect width="640" height="360" fill="#e1edf4"/>
+    <circle cx="320" cy="180" r="118" fill="#fff"/>
+    <path d="M248 240V205l48-45 38 24 61-75" fill="none" stroke="#2878a6" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"/>
+    <path d="M368 109h27v27" fill="none" stroke="#2878a6" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"/>
+    <path d="M252 264h136" stroke="#17324d" stroke-linecap="round" stroke-width="10"/>
+    <circle cx="248" cy="205" r="9" fill="#17324d"/>
+    <circle cx="296" cy="160" r="9" fill="#17324d"/>
+    <circle cx="334" cy="184" r="9" fill="#17324d"/>
+</svg>

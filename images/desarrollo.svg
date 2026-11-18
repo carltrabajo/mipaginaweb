@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title">
+    <title id="title">Desarrollo de soluciones digitales</title>
+    <rect width="640" height="360" fill="#e8eef5"/>
+    <rect x="177" y="71" width="286" height="218" rx="18" fill="#fff" stroke="#17324d" stroke-width="10"/>
+    <path d="M177 119h286" stroke="#17324d" stroke-width="10"/>
+    <circle cx="203" cy="96" r="7" fill="#2878a6"/>
+    <circle cx="228" cy="96" r="7" fill="#2878a6"/>
+    <path d="m272 170-28 25 28 25m96-50 28 25-28 25m-27-67-26 84" fill="none" stroke="#2878a6" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
+    <path d="M245 261h150" stroke="#d7e5ee" stroke-linecap="round" stroke-width="8"/>
+</svg>

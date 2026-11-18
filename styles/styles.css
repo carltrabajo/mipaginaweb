@@ -23,19 +23,36 @@ body {
 }
 
 header {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
     background: var(--navy);
     color: var(--white);
-    padding: 1.25rem max(1.5rem, calc((100% - 1000px) / 2));
+    padding: 0.6rem max(1.25rem, calc((100% - 1200px) / 2));
+}
+
+.home-header {
+    background: rgba(23, 50, 77, 0.92);
 }
 
 header h1 {
-    margin: 0 0 0.75rem;
-    font-size: 1.75rem;
+    margin: 0;
+    font-size: 1.4rem;
+    white-space: nowrap;
+}
+
+nav {
+    margin-left: auto;
 }
 
 nav ul {
     display: flex;
-    gap: 1.5rem;
+    justify-content: flex-end;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
     margin: 0;
     padding: 0;
     list-style: none;
@@ -58,12 +75,16 @@ main {
     padding: 2rem 1.5rem;
 }
 
+.home-main {
+    padding-top: 0;
+}
+
 section {
     padding: 2.5rem 2rem;
     border-left: 4px solid var(--blue);
     background: var(--light-blue);
     margin-bottom: 1.5rem;
-    scroll-margin-top: 1rem;
+    scroll-margin-top: 5rem;
 }
 
 section h2 {
@@ -71,8 +92,144 @@ section h2 {
     color: var(--navy);
 }
 
+.hero {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    min-height: calc(100vh - 4rem);
+    min-height: calc(100svh - 4rem);
+    margin: 0 calc(50% - 50vw) 1.5rem;
+    padding: 2rem 1.5rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 0;
+    background: var(--navy);
+    text-align: center;
+}
+
+.hero::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(23, 50, 77, 0.48), rgba(23, 50, 77, 0.68), rgba(23, 50, 77, 0.48));
+    content: "";
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    color: var(--white);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content h2 {
+    margin: 0 0 0.75rem;
+    color: var(--white);
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    line-height: 1.1;
+}
+
+.hero-content p {
+    margin: 0;
+    font-size: clamp(1.1rem, 2.5vw, 1.75rem);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.service-card {
+    overflow: hidden;
+    border: 1px solid #ccd7df;
+    border-radius: 6px;
+    background: var(--white);
+}
+
+.service-card > img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.service-card-content {
+    padding: 1.25rem;
+}
+
+.service-card h3,
+.service-detail h3 {
+    margin: 0 0 0.5rem;
+    color: var(--navy);
+}
+
+.service-card p {
+    margin: 0 0 0.75rem;
+}
+
+.service-card a,
+.service-detail a {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.service-detail ul {
+    margin-bottom: 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.team-card {
+    padding: 1.25rem;
+    border: 1px solid #ccd7df;
+    border-radius: 6px;
+    background: var(--white);
+}
+
+.team-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--navy);
+}
+
+.team-card p {
+    margin: 0;
+}
+
 .contact-form {
     margin-top: 1.5rem;
+}
+
+.button-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    padding: 0.75rem 1.25rem;
+    background: var(--blue);
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button-link:hover,
+.button-link:focus {
+    background: var(--navy);
 }
 
 .form-row {
@@ -175,9 +332,32 @@ footer p {
 }
 
 @media (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+        gap: 0.35rem 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        flex: 1 1 auto;
+    }
+
     nav ul {
         flex-wrap: wrap;
-        gap: 0.5rem 1rem;
+        gap: 0.25rem 0.75rem;
+    }
+
+    .home-main {
+        padding-top: 0;
+    }
+
+    .hero {
+        min-height: calc(100vh - 4.5rem);
+        min-height: calc(100svh - 4.5rem);
     }
 
     section {
@@ -186,6 +366,14 @@ footer p {
 
     .form-row,
     .contact-methods {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
         grid-template-columns: 1fr;
     }
 }

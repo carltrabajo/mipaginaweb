@@ -4,90 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página web</title>
+    <title>KATOX Development</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-    <header>
+    <header class="home-header">
         <h1>Mi página web</h1>
         <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="inicio">
-            <h2>Bienvenido</h2>
-            <p>Soluciones profesionales y eficientes para impulsar su empresa.</p>
+    <main class="home-main">
+        <section id="inicio" class="hero">
+            <img class="hero-image" src="images/katox-hero.svg" alt="Dos profesionales de distintas etnias revisan juntos una pantalla en una oficina moderna iluminada por el día">
+            <div class="hero-content">
+                <h2>KATOX Development</h2>
+                <p>Danos la oportunidad de ser parte de la evolución de su empresa.</p>
+            </div>
         </section>
 
         <section id="servicios">
             <h2>Servicios</h2>
             <p>Consultoría, desarrollo y acompañamiento adaptados a sus objetivos.</p>
+            <div class="service-grid">
+                <article class="service-card">
+                    <img src="images/consultoria.svg" alt="Ilustración de planificación y estrategia">
+                    <div class="service-card-content">
+                        <h3>Consultoría estratégica</h3>
+                        <p>Identificamos oportunidades y trazamos un plan claro para alcanzar sus objetivos.</p>
+                        <a href="servicios.html#consultoria">Conocer el servicio</a>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img src="images/desarrollo.svg" alt="Ilustración de desarrollo de una solución digital">
+                    <div class="service-card-content">
+                        <h3>Desarrollo de soluciones</h3>
+                        <p>Convertimos sus necesidades en herramientas digitales funcionales y a medida.</p>
+                        <a href="servicios.html#desarrollo">Conocer el servicio</a>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img src="images/optimizacion.svg" alt="Ilustración de procesos conectados y optimizados">
+                    <div class="service-card-content">
+                        <h3>Optimización de procesos</h3>
+                        <p>Simplificamos tareas y flujos de trabajo para mejorar la eficiencia de su equipo.</p>
+                        <a href="servicios.html#optimizacion">Conocer el servicio</a>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <img src="images/acompanamiento.svg" alt="Ilustración de acompañamiento y soporte">
+                    <div class="service-card-content">
+                        <h3>Acompañamiento y soporte</h3>
+                        <p>Le acompañamos en la implementación y evolución de cada solución.</p>
+                        <a href="servicios.html#acompanamiento">Conocer el servicio</a>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section id="nosotros">
             <h2>Sobre nosotros</h2>
             <p>Somos un equipo comprometido con la calidad, la transparencia y los resultados.</p>
+            <a class="button-link" href="nosotros.html">Conozca al equipo</a>
         </section>
 
         <section id="contacto">
             <h2>Contacto</h2>
             <p>Póngase en contacto con nuestro equipo para conocer más sobre nuestros servicios.</p>
-            <form class="contact-form" action="#" method="post">
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" autocomplete="given-name" required>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="apellido">Apellido</label>
-                        <input type="text" id="apellido" name="apellido" autocomplete="family-name" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="email">Correo electrónico</label>
-                        <input type="email" id="email" name="email" autocomplete="email" required>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="telefono">Teléfono <span>(opcional)</span></label>
-                        <input type="tel" id="telefono" name="telefono" autocomplete="tel">
-                    </div>
-                </div>
-
-                <fieldset class="contact-methods">
-                    <legend>Preferencia de contacto por teléfono</legend>
-                    <label class="contact-option">
-                        <input type="radio" name="contacto_telefono" value="whatsapp">
-                        <img class="service-logo" src="images/whatsapp.svg" alt="">
-                        <span>WhatsApp</span>
-                    </label>
-
-                    <label class="contact-option">
-                        <input type="radio" name="contacto_telefono" value="telegram">
-                        <img class="service-logo" src="images/telegram.svg" alt="">
-                        <span>Telegram</span>
-                    </label>
-
-                    <label class="contact-option">
-                        <input type="radio" name="contacto_telefono" value="signal">
-                        <img class="service-logo" src="images/signal.svg" alt="">
-                        <span>Signal</span>
-                    </label>
-                </fieldset>
-
-                <button type="submit">Enviar solicitud</button>
-            </form>
+            <a class="button-link" href="contacto.html">Llenar formulario de contacto</a>
         </section>
     </main>
 
